@@ -38,6 +38,8 @@ create (m)-[r5:`http://www.essepuntato.it/2008/12/earmark#refersTo`]->(p) set r5
 
 
 //labeling the nodes
+
+MATCH (n) with n, SET n.label=semantics.getIRILocalName(n.uri) return n.label
 MATCH (n) with n, SPLIT(n.uri,"/")[-1] as name SET n.label=name return n.label
 MATCH (n) with n, SPLIT(n.label,"#")[-1] as name SET n.label=name return n.label
 
