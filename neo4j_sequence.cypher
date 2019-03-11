@@ -1,19 +1,33 @@
 ///Setting Degree
-MATCH (n) WITH n,
-MATCH (n)-[r]->() with n,r,size((n)-[r]->()) as degree
-RETURN degree
+//MATCH (n) WITH n,
+//MATCH (n)-[r]->() with n,r,size((n)-[r]->()) as degree
+//RETURN degree
 
-MATCH (n) WITH collect(n) as nodes
-unwind nodes as node
-MATCH (node)-[r]-() with r,size((node)-[r]->()) as degree
-SET r.degree=degree
-return r.degree
-
+//MATCH (n) WITH collect(n) as nodes
+//unwind nodes as node
+//MATCH (node)-[r]-() with r,size((node)-[r]->()) as degree
+//SET r.degree=degree
+//return r.degree
+//bi degree
+MATCH (n)-[r]-(m)
+WITH n, count(m) as c, collect(r) as rs
+UNWIND rs as r
+set n.sumdegree=1+log(c)
+set r.degree=1+log(c)
+RETURN r.degree
+//outdegree
 MATCH (n)-[r]->(m)
 WITH n, count(m) as c, collect(r) as rs
 UNWIND rs as r
-set n.outdegree=c
-set r.degree=c
+set n.outdegree=1+log(c)
+set r.degree=1+log(c)
+RETURN r.degree
+//In degree
+MATCH (n)-[r]->(m)
+WITH m, count(n) as c, collect(r) as rs
+UNWIND rs as r
+set m.indegree=1+log(c)
+set r.degree=1+log(c)
 RETURN r.degree
 ///Shortes Path Stream
 MATCH (start{uri:'http://dbpedia.org/resource/Donald_Trump'}), (end{uri:'http://dbpedia.org/resource/Barack_Obama'})
@@ -26,8 +40,9 @@ CALL algo.shortestPath(start, end, 'degree',{write:true,writeProperty:'sssp',dir
 YIELD writeMillis,loadMillis,nodeCount, totalCost
 RETURN writeMillis,loadMillis,nodeCount,totalCost
 ///Query the sssp
-MATCH (n{uri:'http://dbpedia.org/resource/Donald_Trump'})-[r:sssp]-(m)
-RETURN n,r,m
+MATCH (n) WHERE EXISTS(n.sssp) RETURN n
+///Delete sssp
+MATCH (n) WHERE EXISTS(n.sssp) remove n.sssp RETURN n
 ////Get Donald_Trump rels
 MATCH (n{uri:'http://dbpedia.org/resource/Donald_Trump'})-[r]-(m) Return n,r,m LIMIT 20
 MATCH (n{uri:'http://dbpedia.org/resource/Barack_Obama'})-[r]-(m) Return n,r,m LIMIT 20
