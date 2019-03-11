@@ -15,7 +15,7 @@ RETURN arg1,rel,arg2
 
 //Loading RDF
 CREATE INDEX ON :Resource(uri)#prestep
-CALL semantics.importRDF("file:///claimreviews_db_2_12_10_52AM.rdf","RDF/XML", { shortenUrls: false, typesToLabels: true, commitSize: 9000 })
+CALL semantics.importRDF("file:///claimreviews_db_2_12_10_52AM.rdf","RDF/XML", { shortenUrls: false, typesToLabels: false, commitSize: 9000 })
 
 CALL semantics.importRDF("file:///C:/Users/zoya/Desktop/Zoher/factcheckgraph/claimreviews_db_2_12_10_52AM.rdf","RDF/XML", { shortenUrls: false, typesToLabels: true, commitSize: 9000 })
 

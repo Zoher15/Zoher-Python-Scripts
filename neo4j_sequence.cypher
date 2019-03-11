@@ -1,3 +1,22 @@
+///Setting Degree
+MATCH (n) WITH n,
+MATCH (n)-[r]->() with n,r,size((n)-[r]->()) as degree
+RETURN degree
+
+MATCH (n) WITH collect(n) as nodes
+unwind nodes as node
+MATCH (node)-[r]-() with r,size((node)-[r]->()) as degree
+SET r.degree=degree
+return r.degree
+
+MATCH (n)-[r]->(m)
+WITH n, count(m) as c, collect(r) as rs
+UNWIND rs as r
+set n.outdegree=c
+set r.degree=c
+RETURN r.degree
+
+
 ////Get Donald_Trump rels
 MATCH (n{uri:'http://dbpedia.org/resource/Donald_Trump'})-[r]-(m) Return n,r,m LIMIT 20
 MATCH (n{uri:'http://dbpedia.org/resource/Barack_Obama'})-[r]-(m) Return n,r,m LIMIT 20
@@ -5,14 +24,22 @@ http://dbpedia.org/resource/Barack_Obama
 MATCH (n{uri:'http://dbpedia.org/resource/Donald_Trump'})-[r*1..2]-(m) Return n,r,m LIMIT 50
 MATCH a=(n:`schema.org/Person`)-[r*1..3]->(m:`schema.org/Person`) Return a LIMIT 20
 MATCH a=(n:`schema.org/Person`)-[r*1..3]->(m:`schema.org/Person`) Return a LIMIT 20
-MATCH a=(n{uri:'http://dbpedia.org/resource/Donald_Trump'})-[*0..3]-(m) where m.uri starts with 'http://dbpedia.org/resource/' Return a LIMIT 100
+MATCH a=(n{uri:'http://dbpedia.org/resource/Donald_Trump'})-[*1..5]-(m) where m.uri starts with 'http://dbpedia.org/resource/' Return a LIMIT 100
 //
 MATCH a=(n{uri:'http://dbpedia.org/resource/Donald_Trump'})-[*1..10]->(m{uri:'http://dbpedia.org/resource/Hillary_Clinton'}) Return a LIMIT 10
 MATCH (from{uri:'http://dbpedia.org/resource/Donald_Trump'}),(to{uri:'http://dbpedia.org/resource/Hillary_Clinton'}) CALL algo.shortestPath.stream(from, to, "cost") 
 yield path as path, cost as cost
 return path,cost 
-
-MATCH (from{uri:'http://dbpedia.org/resource/Donald_Trump'}),(to{uri:'http://dbpedia.org/resource/United_States'}),path = shortestpath((from)-[*]-(to))
+//
+MATCH (n) WHERE n.uri = 'http://dbpedia.org/resource/Hillary_Clinton'
+CALL apoc.path.subgraphNodes(n, {maxLevel:1,whitelistNodes:"+'http://schema.org/Person'"}) YIELD node
+RETURN node
+//
+MATCH (n{uri:'http://dbpedia.org/resource/Hillary_Clinton'}),(m) where m.uri starts with 'http://dbpedia.org/resource/'
+CALL apoc.path.subgraphNodes(n, {maxLevel:10,whitelistNodes:m}) YIELD node
+RETURN node
+//
+MATCH (from{uri:'http://dbpedia.org/resource/Vladimir_Putin'}),(to{uri:'http://dbpedia.org/resource/United_States'}),path = shortestpath((from)-[*]-(to))
 with path
 WHERE length(path)>2
 return path
@@ -34,7 +61,7 @@ MATCH (n)-[r]-(n) delete r
 
 //1 Import
 CREATE INDEX ON :Resource(uri)//prestep
-CALL semantics.importRDF("file:///C:/Users/zoya/Downloads/claimreviews_db.rdf","RDF/XML", { shortenUrls: false, typesToLabels: true, commitSize: 25000 })
+CALL semantics.importRDF("file:///C:/Users/zoya/Downloads/claimreviews_db.rdf","RDF/XML", { shortenUrls: false, typesToLabels: false, commitSize: 25000 })
 //2 labeling the nodes
 MATCH (n) with n, SPLIT(n.uri,"/")[-1] as name SET n.label=name return n.label
 MATCH (n) with n, SPLIT(n.label,"#")[-1] as name SET n.label=name return n.label
@@ -91,3 +118,8 @@ delete r1,o,r,m
 MATCH ()-[r:`http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer`]->(m)
 OPTIONAL MATCH (m)-[r1]->(o)
 delete r1,o,r,m
+
+MATCH (n) with collect([n,n.uri]) as events
+unwind events as event
+set event[0].label=semantics.getIRILocalName(event[1])
+return event
