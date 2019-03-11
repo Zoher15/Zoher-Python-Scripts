@@ -15,8 +15,19 @@ UNWIND rs as r
 set n.outdegree=c
 set r.degree=c
 RETURN r.degree
-
-
+///Shortes Path Stream
+MATCH (start{uri:'http://dbpedia.org/resource/Donald_Trump'}), (end{uri:'http://dbpedia.org/resource/Barack_Obama'})
+CALL algo.shortestPath.stream(start, end, 'degree')
+YIELD nodeId, cost
+RETURN algo.getNodeById(nodeId).name AS name, cost
+///
+MATCH (start{uri:'http://dbpedia.org/resource/Donald_Trump'}), (end{uri:'http://dbpedia.org/resource/Vladimir_Putin'})
+CALL algo.shortestPath(start, end, 'degree',{write:true,writeProperty:'sssp',direction:'both'})
+YIELD writeMillis,loadMillis,nodeCount, totalCost
+RETURN writeMillis,loadMillis,nodeCount,totalCost
+///Query the sssp
+MATCH (n{uri:'http://dbpedia.org/resource/Donald_Trump'})-[r:sssp]-(m)
+RETURN n,r,m
 ////Get Donald_Trump rels
 MATCH (n{uri:'http://dbpedia.org/resource/Donald_Trump'})-[r]-(m) Return n,r,m LIMIT 20
 MATCH (n{uri:'http://dbpedia.org/resource/Barack_Obama'})-[r]-(m) Return n,r,m LIMIT 20
