@@ -1,32 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rdf:RDF
-    xmlns:j.0="http://www.essepuntato.it/2008/12/earmark#"
-    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
-    xmlns:j.2="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
-    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
-    xmlns:j.4="http://dbpedia.org/resource/"
-    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
-    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
+    xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.7="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.8="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
-    xmlns:j.9="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.10="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"
+    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
+    xmlns:j.6="http://dbpedia.org/resource/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.7="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#benefit_1">
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Health"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthBenefit"/>
+    <j.7:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#drink_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Drink"/>
-    <j.6:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_1"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#UntreatedSpring">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Spring"/>
-    <j.7:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Untreated"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Untreated"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#UntreatedSpringWater">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#UntreatedSpring"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#UntreatedSpring"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SpringWater"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Untreated">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Sewage_treatment"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27RawWater">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RawWater"/>
@@ -34,89 +38,63 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Provide">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Provide_13041200"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#involves">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#spring_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Spring"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_19_31_spring+water">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring water</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">31</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">19</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SpringWater"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spring Water</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_9_31_untreated+spring+water">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">untreated spring water</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">31</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">9</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#UntreatedSpringWater"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Untreated Spring Water</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Drink">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Drinking_water"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Drink_39010200"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#market_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Market"/>
-    <j.1:as rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_2"/>
-    <j.3:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_1"/>
-    <j.3:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_3"/>
+    <j.3:as rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_2"/>
+    <j.4:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_1"/>
+    <j.4:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_3"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1">
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Probiotic"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Probiotic"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Theme">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_2">
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Raw"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27RawWater"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_50_55_water">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">55</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">50</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Water"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_2">
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Probiotic"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_9_18_untreated">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">untreated</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">9</j.0:begins>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">18</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Untreated"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#provide_1">
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_2"/>
+    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#benefit_1"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
+    <j.3:because rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Provide"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SpringWater">
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Spring"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Water"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RawWater">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Raw_water"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Water"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#UntreatedSpringWater"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#health_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#benefit_1"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#benefit_1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Spring">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
-    <j.0:hasContent>Drinking untreated spring water, marketed as 'raw water,' provides health benefits because they are 'probiotic.'</j.0:hasContent>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_67_73_health">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">health</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">67</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">73</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#health_1"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_3">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
@@ -124,268 +102,14 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthBenefit">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Benefit"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Probiotic">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Probiotic"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_26_31_water">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">26</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_1"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">31</j.0:ends>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_2"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Water"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Untreated">
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Sewage_treatment"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_46_55_raw+water">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raw water</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">55</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">46</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RawWater"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raw Water</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Drink">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Drinking_water"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Drink_39010200"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_58_66_provides">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">provides</rdfs:label>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBZ"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">58</j.0:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">66</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Provide"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#provide_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Benefit">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_2">
-    <j.7:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Raw"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27RawWater"/>
-    <j.7:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Water">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_0_8_Drinking">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drinking</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#drink_1"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Drink"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</j.0:begins>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBG"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#because">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Raw">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_33_41_marketed">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marketed</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#market_1"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">33</j.0:begins>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Market"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">41</j.0:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBD"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_101_110_probiotic">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">probiotic</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">110</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">101</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Probiotic"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_46_49_raw">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raw</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Raw"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">49</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">46</j.0:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#patient">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SpringWater">
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Spring"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Water"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RawWater">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Raw_water"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Water"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_42_44_as">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">as</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">44</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#As"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">42</j.0:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#UntreatedSpringWater"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_83_90_because">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">because</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">90</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">83</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Because"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#benefit_1">
-    <rdf:type rdf:resource="http://dbpedia.org/resource/Health"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthBenefit"/>
-    <j.5:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#spring_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Spring"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_2">
-    <j.7:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Probiotic"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#provide_1">
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#water_2"/>
-    <j.6:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#benefit_1"/>
-    <j.6:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
-    <j.1:because rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Provide"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_74_82_benefits">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">benefits</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Benefit"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">74</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">82</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#benefit_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_45_46_%27">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">45</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_3"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">46</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_2"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#POS"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#as">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_19_25_spring">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">19</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">25</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Spring"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#spring_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_91_95_they">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">they</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">95</j.0:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#PRP"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">91</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Probiotic">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Probiotic"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Market">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
 </rdf:RDF>

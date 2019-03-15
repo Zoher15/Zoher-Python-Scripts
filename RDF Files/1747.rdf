@@ -2,18 +2,26 @@
 <rdf:RDF
     xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.1="http://www.essepuntato.it/2008/12/earmark#"
-    xmlns:j.4="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
-    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
-    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
-    xmlns:j.7="http://schema.org/"
-    xmlns:j.8="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+    xmlns:j.3="http://schema.org/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PalestinianLawmaker">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lawmaker"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Nikki_haley">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Nikki_Haley"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jerusalem">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Jerusalem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threat_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Threat"/>
+    <j.2:threatOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Nikki_haley"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Show">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Show_48012000"/>
   </rdf:Description>
@@ -21,19 +29,20 @@
     <rdf:type rdf:resource="http://schema.org/Place"/>
     <rdf:type rdf:resource="http://schema.org/City"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lawmaker">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Embassy">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#embassy_1">
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#U.s."/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Embassy"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ControversialDecision">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Controversial"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Controversial"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Decision"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Theme">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cut_1">
+    <j.0:Patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#aid_1"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threat_1"/>
+    <j.2:inWakeOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#decision_1"/>
+    <j.0:Oblique rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#country_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cut"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#move_1">
     <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#embassy_1"/>
@@ -41,434 +50,60 @@
     <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#decision_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Move"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_26_35_lawmakers">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lawmakers</rdfs:label>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lawmaker_1"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">26</j.1:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lawmaker"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">35</j.1:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_158_162_U.S.">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">U.S.</rdfs:label>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">158</j.1:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#U.s."/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">162</j.1:ends>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#inWakeOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#country_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Country"/>
-    <j.8:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Palestinian">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Palestinians"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Oblique">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_36_43_dancing">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dancing</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBG"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dance"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">43</j.1:ends>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dance_1"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">36</j.1:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_106_108_in">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#In"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">106</j.1:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">108</j.1:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wake_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Wake"/>
-    <j.8:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lawmaker_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PalestinianLawmaker"/>
-    <j.8:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Palestinian"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <j.1:hasContent>A video shows Palestinian lawmakers dancing in response to Nikki_Haley's threat to cut aid to the country in the wake of a controversial decision to move the U.S. embassy to Jerusalem.</j.1:hasContent>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Patient">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Decision">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_123_145_controversial+decision">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">controversial decision</rdfs:label>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">145</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">123</j.1:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ControversialDecision"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Controversial Decision</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dance_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dance"/>
-    <j.0:Location rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#response_1"/>
-    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lawmaker_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_14_25_Palestinian">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palestinian</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">14</j.1:begins>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Palestinian"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">25</j.1:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jerusalem">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Jerusalem"/>
-    <j.6:possibleType rdf:resource="http://dbpedia.org/ontology/Place"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_113_117_wake">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wake</rdfs:label>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">117</j.1:ends>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wake_1"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Wake"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">113</j.1:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_123_136_controversial">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">controversial</rdfs:label>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Controversial"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">136</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">123</j.1:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Aid">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#embassy_1">
-    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#U.s."/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Embassy"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_163_170_embassy">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">embassy</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">163</j.1:begins>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">170</j.1:ends>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#embassy_1"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Embassy"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_174_183_Jerusalem">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jerusalem</rdfs:label>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">183</j.1:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jerusalem"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">174</j.1:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_8_13_shows">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shows</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</j.1:begins>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Show"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBZ"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13</j.1:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#aid_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Aid"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_56_58_to">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to</rdfs:label>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#To"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">58</j.1:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#TO"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">56</j.1:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_47_55_response">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">response</rdfs:label>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">47</j.1:begins>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Response"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">55</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#response_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_73_79_threat">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">threat</rdfs:label>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">79</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threat_1"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">73</j.1:begins>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Threat"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#video_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Video"/>
-    <j.8:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_137_145_decision">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decision</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">137</j.1:begins>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">145</j.1:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#decision_1"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Decision"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#response_1">
-    <j.3:to rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threat_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Response"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_146_148_to">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to</rdfs:label>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">146</j.1:begins>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">148</j.1:ends>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#TO"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Oblique"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PalestinianLawmaker">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lawmaker"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threat_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Threat"/>
-    <j.3:threatOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Nikki_haley"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_2_7_video">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">video</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#video_1"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">7</j.1:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Video"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</j.1:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Location">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Threat">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_118_120_of">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">of</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">120</j.1:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Of"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">118</j.1:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Move">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Move_51031000"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Response">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Video">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Country">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Controversial">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_98_105_country">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Country"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#country_1"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">105</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">98</j.1:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#decision_1">
-    <j.8:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ControversialDecision"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_80_82_to">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">82</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">80</j.1:begins>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Oblique"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#TO"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#U.s.">
-    <j.6:possibleType rdf:resource="http://dbpedia.org/ontology/Place"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Nikki_haley">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Nikki_Haley"/>
-    <j.6:possibleType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_70_72_%27s">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'s</rdfs:label>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">70</j.1:begins>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">72</j.1:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Of"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#POS"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_87_90_aid">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aid</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#aid_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">87</j.1:begins>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Aid"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">90</j.1:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#to">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_149_153_move">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move</rdfs:label>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Move"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">149</j.1:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VB"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#move_1"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">153</j.1:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threatOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cut_1">
-    <j.0:Patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#aid_1"/>
-    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threat_1"/>
-    <j.3:inWakeOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#decision_1"/>
-    <j.0:Oblique rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#country_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cut"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_20_22_in">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in</rdfs:label>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">22</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">20</j.1:begins>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Location"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cut">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Cut_21010100"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_59_70_Nikki_Haley">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikki_Haley</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Nikki_haley"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">70</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">59</j.1:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_83_86_cut">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cut</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VB"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cut_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">86</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cut"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">83</j.1:begins>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Palestinian">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Palestinians"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dance">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Dance_51050000"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Wake">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#aid_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Aid"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Move">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Move_51031000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wake_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Wake"/>
+    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lawmaker_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PalestinianLawmaker"/>
+    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Palestinian"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Controversial">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#decision_1">
+    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ControversialDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#video_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Video"/>
+    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#show_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Show"/>
     <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lawmaker_1"/>
     <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#video_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#response_1">
+    <j.2:to rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threat_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Response"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dance_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dance"/>
+    <j.0:Location rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#response_1"/>
+    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lawmaker_1"/>
   </rdf:Description>
 </rdf:RDF>

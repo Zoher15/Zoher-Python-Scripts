@@ -1,26 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rdf:RDF
-    xmlns:j.0="http://www.essepuntato.it/2008/12/earmark#"
-    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
-    xmlns:j.2="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
-    xmlns:j.3="http://schema.org/"
-    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
-    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
+    xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pre-existingCondition%27"
-    xmlns:j.7="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.8="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
-    xmlns:j.9="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pre-existingCondition%27"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+    xmlns:j.5="http://schema.org/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Charge">
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Charge_54050000"/>
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Charge_51032000"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#under">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#senior_1">
+    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Senior"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bill_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RepublicanHealthCareBill"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_2">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Care"/>
+    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bill_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthCare"/>
@@ -28,98 +32,63 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pre-existingCondition%27">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Condition%27"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#involves">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Republican_Party_(United_States)">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_1_8_Seniors">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seniors</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Senior"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#senior_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CareBill">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bill"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Theme">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RepublicanHealthCareBill">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthCareBill"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_109_114_under">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">under</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">114</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Under"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">109</j.0:begins>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#health_2">
+    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bill_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health"/>
+    <j.6:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Five">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#hasModality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_16_23_charged">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">charged</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">23</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Charge"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#charge_1"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBN"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">16</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#charge_2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_29_34_times">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">times</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">34</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">29</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#time_1"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Time"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Republican">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Republican_Party_(United_States)"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#charge_2">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Charge"/>
-    <j.1:under rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bill_1"/>
-    <j.8:hasModality rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Possible"/>
-    <j.5:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1"/>
-    <j.5:Location rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_1"/>
-    <j.1:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#time_1"/>
+    <j.3:under rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bill_1"/>
+    <j.4:hasModality rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Possible"/>
+    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1"/>
+    <j.0:Location rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_1"/>
+    <j.3:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
+    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#time_1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_80_83_for">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">for</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#For"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">83</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">80</j.0:begins>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#condition_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Condition"/>
+    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
+    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person"/>
+    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Else"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#time_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Time"/>
+    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#five"/>
+    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#charge_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Charge"/>
+    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
+    <j.0:Recipient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#senior_1"/>
+    <j.0:Asset rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#charge_2"/>
+    <j.4:hasModality rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Possible"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#health_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_1"/>
+    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_130_141_health+care">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">health care</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">141</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">130</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthCare"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Health Care</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pre-existingCondition%27"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <j.0:hasContent>'Seniors can be charged five times what anybody else is charged for health care for pre-existing conditions' under the Republican health care bill.</j.0:hasContent>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthCareBill">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Patient_Protection_and_Affordable_Care_Act"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CareBill"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Condition%27">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
@@ -127,316 +96,14 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthCare">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Health_care_in_the_United_States"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Care"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#senior_1">
-    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Senior"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_2">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Care"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bill_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_64_67_for">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">for</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">64</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Location"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">67</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Condition">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Care">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_107_108_%27">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#POS"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">108</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">107</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RepublicanHealthCareBill">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthCareBill"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_142_146_bill">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bill</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bill_1"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bill"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">142</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">146</j.0:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Republican">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Republican_Party_(United_States)"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Recipient">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#time_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Time"/>
-    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#five"/>
-    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#charge_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Charge"/>
-    <j.7:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
-    <j.5:Recipient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#senior_1"/>
-    <j.5:Asset rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#charge_2"/>
-    <j.8:hasModality rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Possible"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pre-existingCondition%27"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_130_146_health+care+bill">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">health care bill</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Health Care Bill</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthCareBill"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">130</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">146</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pre-existing">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_48_52_else">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">else</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Else"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#RB"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">48</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">52</j.0:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
+    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#five_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_1"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#charge_2"/>
+    <j.4:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_1"/>
+    <j.4:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
+    <j.4:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1"/>
+    <j.4:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#charge_2"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Five"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Time">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_119_146_republican+health+care+bill">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican health care bill</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">146</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">119</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RepublicanHealthCareBill"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican Health Care Bill</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_137_146_care+bill">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">care bill</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">146</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">137</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CareBill"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Care Bill</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_24_28_five">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">five</rdfs:label>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#CD"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Five"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28</j.0:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#five_1"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">24</j.0:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Location">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#for">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_119_129_Republican">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">129</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">119</j.0:begins>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Republican"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_68_74_health">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">health</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#health_2"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">74</j.0:ends>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#health_1"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">68</j.0:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person"/>
-    <j.7:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Else"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Else">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_97_107_conditions">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conditions</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">97</j.0:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#condition_1"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Condition"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">107</j.0:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_68_79_health+care">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">health care</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Health Care</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthCare"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">68</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">79</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_40_47_anybody">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anybody</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">47</j.0:ends>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#DT"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bill">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bill_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RepublicanHealthCareBill"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/resource/Republican_Party_(United_States)">
-    <rdf:type rdf:resource="http://schema.org/Organization"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CareBill">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bill"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_0_1_%27">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#POS"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#health_2">
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bill_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Health"/>
-    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_75_79_care">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">care</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Care"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">75</j.0:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_2"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#care_1"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">79</j.0:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Senior">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#condition_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Condition"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
-    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_84_96_pre-existing">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pre-existing</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">96</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pre-existing"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">84</j.0:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_137_141_care">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">care</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">141</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">137</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Care"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Care</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HealthCareBill">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Patient_Protection_and_Affordable_Care_Act"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CareBill"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Asset">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>

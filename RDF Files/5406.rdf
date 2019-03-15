@@ -2,372 +2,91 @@
 <rdf:RDF
     xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.1="http://www.essepuntato.it/2008/12/earmark#"
-    xmlns:j.4="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
-    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
-    xmlns:j.6="http://dbpedia.org/resource/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:j.7="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
+    xmlns:j.3="http://dbpedia.org/resource/"
+    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ScientificConsensus">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Scientific_opinion_on_climate_change"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scientific"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Consensus"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LevelRise">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Level"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Level"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Rise"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Global">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#warming_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#GlobalWarming"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Global"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rise_1">
-    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conflict_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevelRise"/>
-    <j.3:with rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#consensus_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_91_98_warming">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warming</rdfs:label>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">91</j.1:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Warming"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#warming_1"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">98</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <j.1:hasContent>A recent hiatus in sea level rise conflicts with the scientific consensus regarding global warming.</j.1:hasContent>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_84_98_global+warming">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">global warming</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Warming</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#GlobalWarming"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">84</j.1:begins>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">98</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Rise">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_9_15_hiatus">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hiatus</rdfs:label>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">9</j.1:begins>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hiatus"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</j.1:ends>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#hiatus_1"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Topic">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#with">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Conflict">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_19_22_sea">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sea</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">22</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">19</j.1:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sea_1"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sea"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Consensus">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_2_15_recent+hiatus">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recent hiatus</rdfs:label>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</j.1:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RecentHiatus"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recent Hiatus</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#level_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevel"/>
-    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rise_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Recent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scientific">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sea">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_53_63_scientific">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scientific</rdfs:label>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scientific"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">53</j.1:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">63</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_44_48_with">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">with</rdfs:label>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#With"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">48</j.1:ends>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">44</j.1:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_16_18_in">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in</rdfs:label>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">18</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">16</j.1:begins>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#In"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Experiencer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_64_73_consensus">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consensus</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#consensus_1"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">73</j.1:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">64</j.1:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Consensus"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#consensus_1">
+    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ScientificConsensus"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conflict_1">
     <rdf:type rdf:resource="http://dbpedia.org/resource/War"/>
-    <j.7:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Conflict"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Regard">
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Regard_30020000"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Level">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevelRise">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Sea_level_rise"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LevelRise"/>
-    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevel"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevel"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#regard_1">
     <j.0:Experiencer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#consensus_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Regard"/>
     <j.0:Stimulus rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#warming_1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RecentHiatus">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hiatus"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Recent"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Global">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rise_1">
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conflict_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevelRise"/>
+    <j.2:with rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#consensus_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sea_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sea"/>
-    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rise_1"/>
-    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#level_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_84_90_global">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">global</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">90</j.1:ends>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Global"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">84</j.1:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Stimulus">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_23_33_level+rise">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level rise</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Level Rise</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LevelRise"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">23</j.1:begins>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">33</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevel">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Level"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.2:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sea"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hiatus">
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Global_warming_hiatus"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#GlobalWarming">
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Global_warming"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Global"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Warming"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_19_33_sea+level+rise">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sea level rise</rdfs:label>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">33</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">19</j.1:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevelRise"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sea Level Rise</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ScientificConsensus">
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Scientific_opinion_on_climate_change"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scientific"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Consensus"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#warming_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#GlobalWarming"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Global"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_2_8_recent">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recent</rdfs:label>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Recent"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</j.1:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#consensus_1">
-    <j.7:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ScientificConsensus"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_74_83_regarding">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regarding</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#regard_1"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">83</j.1:ends>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Regard"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBG"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">74</j.1:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_19_28_sea+level">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sea level</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sea Level</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevel"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">19</j.1:begins>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RecentHiatus">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hiatus"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Recent"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rise_1"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#level_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#hiatus_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RecentHiatus"/>
-    <j.3:in rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rise_1"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Topic"/>
-    <j.7:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
+    <j.2:in rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rise_1"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Topic"/>
+    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_29_33_rise">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rise</rdfs:label>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Rise"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rise_1"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">33</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">29</j.1:begins>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#level_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevel"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rise_1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_34_43_conflicts">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conflicts</rdfs:label>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">43</j.1:ends>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">34</j.1:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Conflict"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#conflict_1"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Recent">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_53_73_scientific+consensus">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scientific consensus</rdfs:label>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">73</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">53</j.1:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ScientificConsensus"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientific Consensus</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Scientific">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#in">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SeaLevel">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Level"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sea"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Warming">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hiatus">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Global_warming_hiatus"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_23_28_level">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">23</j.1:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#level_1"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Level"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#GlobalWarming">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Global_warming"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Global"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Warming"/>
   </rdf:Description>
 </rdf:RDF>

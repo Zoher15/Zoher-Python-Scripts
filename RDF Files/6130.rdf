@@ -2,45 +2,54 @@
 <rdf:RDF
     xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.2="http://www.essepuntato.it/2008/12/earmark#"
     xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.4="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
-    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
-    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
-    xmlns:j.7="http://schema.org/"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
+    xmlns:j.4="http://schema.org/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:j.8="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
+    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#TelevisionBroadcast">
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Broadcast"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Arrest">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Donald_Trump"/>
+    <j.1:hasRole rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#President"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#President"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Live_television"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_117_121_harm">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">harm</rdfs:label>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">117</j.2:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VB"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Harm"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">121</j.2:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#harm_1"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#arrest_1">
+    <j.3:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Comedian_amy_schumer"/>
+    <j.2:at rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#academy_awards_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Arrest"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Harm">
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Harm_31010000"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#broadcast_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LiveTelevisionBroadcast"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_93_113_television+broadcast">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">television broadcast</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Television Broadcast</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#TelevisionBroadcast"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">93</j.2:begins>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">113</j.2:ends>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Threaten">
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Threaten_31010000"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Live">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#television_1">
+    <j.5:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#broadcast_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Donald_Trump">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#harm_1">
     <j.0:Experiencer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump"/>
@@ -48,255 +57,25 @@
     <j.0:Cause rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#broadcast_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#academy_awards_1">
-    <j.8:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-    <j.3:at rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-01</j.3:at>
+    <j.5:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+    <j.2:at rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-01</j.2:at>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Academy_awards"/>
-    <j.8:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+    <j.5:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LiveTelevisionBroadcast">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LiveTelevision"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#TelevisionBroadcast"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LiveTelevision">
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Live"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Academy_awards">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Academy_Awards"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threaten_1">
     <j.0:Cause rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#academy_awards_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Threaten"/>
-    <j.3:during rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#broadcast_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <j.2:hasContent>Comedian Amy_Schumer was arrested at the 2017 Academy_Awards for threatening during the live television broadcast to harm President Trump.</j.2:hasContent>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Comedian_amy_schumer">
-    <j.6:possibleType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Donald_Trump"/>
-    <j.6:possibleType rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <j.1:hasRole rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#President"/>
-    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#President"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_0_20_Comedian+Amy_Schumer">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedian Amy_Schumer</rdfs:label>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</j.2:begins>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Comedian_amy_schumer"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">20</j.2:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_104_113_broadcast">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">broadcast</rdfs:label>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">104</j.2:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">113</j.2:ends>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#broadcast_1"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Broadcast"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Threaten">
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Threaten_31010000"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_88_92_live">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">live</rdfs:label>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">88</j.2:begins>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Live"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">92</j.2:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#television_1">
-    <j.8:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television"/>
-    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#broadcast_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/resource/Donald_Trump">
-    <rdf:type rdf:resource="http://schema.org/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Experiencer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Broadcast">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#during">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#TelevisionBroadcast">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Broadcast"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Arrest">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#arrest_1">
-    <j.6:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Comedian_amy_schumer"/>
-    <j.3:at rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#academy_awards_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Arrest"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#patient">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Harm">
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Harm_31010000"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Live">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#at">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_88_113_live+television+broadcast">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">live television broadcast</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live Television Broadcast</rdfs:label>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">113</j.2:ends>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">88</j.2:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LiveTelevisionBroadcast"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_93_103_television">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">television</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#television_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">103</j.2:ends>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">93</j.2:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_77_83_during">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">during</rdfs:label>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">83</j.2:ends>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#During"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">77</j.2:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Cause">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_122_131_President">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">President</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">122</j.2:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#President"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">131</j.2:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_34_36_at">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at</rdfs:label>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#At"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">36</j.2:ends>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">34</j.2:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LiveTelevision">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Live"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_132_137_Trump">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trump</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">137</j.2:ends>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">132</j.2:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_65_76_threatening">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">threatening</rdfs:label>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">65</j.2:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">76</j.2:ends>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#threaten_1"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBG"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Threaten"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_46_60_Academy_Awards">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Academy_Awards</rdfs:label>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">46</j.2:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#academy_awards_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">60</j.2:ends>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Academy_awards"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#President">
-    <j.6:possibleType rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_25_33_arrested">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arrested</rdfs:label>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBN"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#arrest_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">33</j.2:ends>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Arrest"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">25</j.2:begins>
+    <j.2:during rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#broadcast_1"/>
   </rdf:Description>
 </rdf:RDF>

@@ -2,29 +2,34 @@
 <rdf:RDF
     xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.1="http://www.essepuntato.it/2008/12/earmark#"
-    xmlns:j.4="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
-    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
-    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Catholics">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Catholicism"/>
-    <j.6:possibleType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#patient">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pope_francis">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Pope_Francis"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Presidential">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Decree">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Decree_29030000"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hillary_clinton">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Hillary_Clinton"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Democratic"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Presidential"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DemocraticPresidentialCandidate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PresidentialCandidate">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/President_of_the_United_States"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Candidate"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Presidential"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#decree_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Decree"/>
@@ -32,217 +37,24 @@
     <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pope_francis"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cannot_1">
-    <j.6:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vote_1"/>
-    <j.6:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Catholics"/>
-    <j.3:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hillary_clinton"/>
+    <j.3:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vote_1"/>
+    <j.3:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Catholics"/>
+    <j.2:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hillary_clinton"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cannot"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#for">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_86_101_Hillary_Clinton">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hillary_Clinton</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hillary_clinton"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">86</j.1:begins>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">101</j.1:ends>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Candidate"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cannot">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Suffrage"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <j.1:hasContent>Pope_Francis decreed that Catholics cannot vote for Democratic presidential candidate Hillary_Clinton.</j.1:hasContent>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_43_47_vote">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vote</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vote_1"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">43</j.1:begins>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">47</j.1:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vote"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Candidate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pope_francis">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Pope_Francis"/>
-    <j.6:possibleType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Decree">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Decree_29030000"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Presidential">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hillary_clinton">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Hillary_Clinton"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Democratic"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Presidential"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DemocraticPresidentialCandidate"/>
-    <j.6:possibleType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_63_85_presidential+candidate">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">presidential candidate</rdfs:label>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">85</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">63</j.1:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PresidentialCandidate"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presidential Candidate</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_52_85_democratic+presidential+candidate">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic presidential candidate</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">85</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">52</j.1:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DemocraticPresidentialCandidate"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic Presidential Candidate</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_36_42_cannot">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cannot</rdfs:label>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cannot"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">36</j.1:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#cannot_1"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">42</j.1:ends>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBP"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Predicate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_26_35_Catholics">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catholics</rdfs:label>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">35</j.1:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNPS"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">26</j.1:begins>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Catholics"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PresidentialCandidate">
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/President_of_the_United_States"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Candidate"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.2:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Presidential"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_13_20_decreed">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreed</rdfs:label>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#decree_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">20</j.1:ends>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBD"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Decree"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13</j.1:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_0_12_Pope_Francis">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pope_Francis</rdfs:label>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">12</j.1:ends>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pope_francis"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</j.1:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Cannot">
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_63_75_presidential">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">presidential</rdfs:label>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Presidential"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">63</j.1:begins>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">75</j.1:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_48_51_for">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">for</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">48</j.1:begins>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#For"/>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">51</j.1:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DemocraticPresidentialCandidate">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PresidentialCandidate"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Democratic">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Democracy"/>
-    <j.5:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DemocraticPresidentialCandidate">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PresidentialCandidate"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vote_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vote"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_76_85_candidate">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">candidate</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hillary_clinton"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Candidate"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">85</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">76</j.1:begins>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.4:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#candidate_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_52_62_Democratic">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</rdfs:label>
-    <j.1:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.4:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Democratic"/>
-    <j.5:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.1:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">62</j.1:ends>
-    <j.1:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">52</j.1:begins>
   </rdf:Description>
 </rdf:RDF>

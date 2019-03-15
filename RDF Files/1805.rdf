@@ -1,26 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rdf:RDF
-    xmlns:j.0="http://www.essepuntato.it/2008/12/earmark#"
-    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
-    xmlns:j.2="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
+    xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:j.3="http://dbpedia.org/resource/"
     xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
-    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
-    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/cnlp/dependencies.owl#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.7="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.8="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.9="http://www.ontologydesignpatterns.org/ont/cnlp/coref.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#growth_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Appearance"/>
+    <j.2:appearanceOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#farmer_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Growth"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Growth">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Cell_growth"/>
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Oxytocin">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Oxytocin"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HumanHormone">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <j.7:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Human"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Human"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hormone"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fruit_1">
@@ -28,292 +28,55 @@
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fruit"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HormoneOxytocin">
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hormone"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hormone"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Oxytocin"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#enhance_1">
-    <j.5:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#oxytocin_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Enhance"/>
-    <j.5:Patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#growth_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#inject_1">
-    <j.5:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#farmer_1"/>
-    <j.5:Destination rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fruit_1"/>
-    <j.5:Destination rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vegetable_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Inject"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vegetable_1">
-    <rdf:type rdf:resource="http://dbpedia.org/resource/Vegetable"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vegetable"/>
-    <j.1:with rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#oxytocin_1"/>
-    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_104_114_appearance">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">appearance</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appearance_1"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">104</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">114</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Appearance"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_59_75_hormone+oxytocin">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hormone oxytocin</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hormone Oxytocin</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HormoneOxytocin"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">59</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">75</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vegetable">
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_0_7_Farmers">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farmers</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#farmer_1"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">7</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Farmer"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</j.0:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <j.0:hasContent>Farmers are injecting fruits and vegetables with the human hormone oxytocin to enhance their growth and appearance.</j.0:hasContent>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Patient">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1">
-    <j.9:coref rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#farmer_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fruit">
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#with">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HumanHormoneOxytocin">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HormoneOxytocin"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HumanHormone"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HumanHormone"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Farmer">
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#enhance_1">
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#oxytocin_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Enhance"/>
+    <j.0:Patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#growth_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#inject_1">
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#farmer_1"/>
+    <j.0:Destination rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fruit_1"/>
+    <j.0:Destination rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vegetable_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Inject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hormone">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Hormone"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#oxytocin_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HumanHormoneOxytocin"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_53_75_human+hormone+oxytocin">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human hormone oxytocin</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">75</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">53</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#HumanHormoneOxytocin"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Hormone Oxytocin</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_79_86_enhance">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enhance</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#enhance_1"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">86</j.0:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Enhance"/>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VB"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">79</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_44_48_with">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">with</rdfs:label>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#With"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">48</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">44</j.0:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Inject">
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Inject_9080000"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_93_99_growth">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">growth</rdfs:label>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">93</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">99</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Growth"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#growth_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Human">
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/cnlp/dependencies.owl#other_coref">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_67_75_oxytocin">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxytocin</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">67</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">75</j.0:ends>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Oxytocin"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#oxytocin_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_22_28_fruits">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fruits</rdfs:label>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fruit"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28</j.0:ends>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fruit_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">22</j.0:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Appearance">
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_33_43_vegetables">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vegetables</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vegetable_1"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vegetable"/>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">33</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">43</j.0:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#vegetable_1">
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Vegetable"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vegetable"/>
+    <j.2:with rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#oxytocin_1"/>
+    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#hormone_1">
     <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#oxytocin_1"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#oxytocin_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hormone"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Inject">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Inject_9080000"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Human">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Enhance">
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Enhance_45040000"/>
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#farmer_1">
     <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Farmer"/>
-    <j.6:other_coref rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/cnlp/coref.owl#coref">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#growth_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Appearance"/>
-    <j.1:appearanceOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#farmer_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Growth"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Oxytocin">
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Oxytocin"/>
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_59_66_hormone">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hormone</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#hormone_1"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hormone"/>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">66</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">59</j.0:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#appearanceOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_87_92_their">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">their</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Of"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">92</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">87</j.0:begins>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#PRP%24"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#farmer_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Hormone">
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Hormone"/>
-    <j.8:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_12_21_injecting">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">injecting</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#inject_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">12</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">21</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Inject"/>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBG"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_53_58_human">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">58</j.0:ends>
-    <j.8:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">53</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Human"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Destination">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>

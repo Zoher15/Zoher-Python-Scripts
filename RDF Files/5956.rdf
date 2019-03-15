@@ -1,18 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rdf:RDF
-    xmlns:j.0="http://www.essepuntato.it/2008/12/earmark#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
     xmlns:j.1="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
-    xmlns:j.2="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:j.3="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
     xmlns:j.4="http://dbpedia.org/resource/"
     xmlns:j.5="http://schema.org/"
     xmlns:j.6="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.7="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.8="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
-    xmlns:j.9="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russian">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Russia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RussianInterest">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Interest"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fund_1">
     <j.3:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russia"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fund"/>
@@ -21,209 +24,36 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russia">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Russia"/>
-    <j.3:possibleType rdf:resource="http://dbpedia.org/ontology/Place"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_28_30_in">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">30</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28</j.0:begins>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#In"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ferguson">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Ferguson_unrest"/>
-    <j.3:possibleType rdf:resource="http://dbpedia.org/ontology/Place"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_62_64_or">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">or</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Union"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">62</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">64</j.0:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#CC"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1">
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#interest_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Disjunct"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russian"/>
-    <j.8:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Interest"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#involves">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#patient">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#protest_1">
-    <rdf:type rdf:resource="http://dbpedia.org/resource/Protest"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Protest"/>
-    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-    <j.1:locatedIn rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ferguson"/>
-    <j.7:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Black_lives_matter"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_45_51_funded">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">funded</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fund"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">51</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBN"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">45</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fund_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Protest">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_55_61_Russia">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">55</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russia"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">61</j.0:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_73_82_interests">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interests</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">73</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#interest_1"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Interest"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">82</j.0:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_0_18_Black_Lives_Matter">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black_Lives_Matter</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">18</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</j.0:begins>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Black_lives_matter"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RussianInterest">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Interest"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_65_71_Russia">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</rdfs:label>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">65</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">71</j.0:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russia"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
-    <j.0:hasContent>Black_Lives_Matter protests in Ferguson were funded by Russia or Russian interests.</j.0:hasContent>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fund">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_19_27_protests">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protests</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">27</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">19</j.0:begins>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Protest"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#protest_1"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Interest">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#interest_1">
-    <j.7:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russian"/>
-    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RussianInterest"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_31_39_Ferguson">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferguson</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">31</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">39</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ferguson"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russian">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Russia"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/Russia">
     <rdf:type rdf:resource="http://schema.org/Place"/>
     <rdf:type rdf:resource="http://schema.org/Country"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Black_lives_matter">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Black_Lives_Matter"/>
-    <j.3:possibleType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#locatedIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ferguson">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Ferguson_unrest"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_65_72_Russian">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russian</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">65</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">72</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russian"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disjunct_1">
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#interest_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Disjunct"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russian"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Interest"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#protest_1">
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Protest"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Protest"/>
+    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Black_lives_matter"/>
+    <j.1:in rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ferguson"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_52_54_by">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">by</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">54</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Agent"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">52</j.0:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fund">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#interest_1">
+    <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russian"/>
+    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#RussianInterest"/>
   </rdf:Description>
 </rdf:RDF>

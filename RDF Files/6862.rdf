@@ -1,370 +1,82 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rdf:RDF
-    xmlns:j.0="http://www.essepuntato.it/2008/12/earmark#"
-    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
-    xmlns:j.2="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
+    xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:j.3="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
     xmlns:j.4="http://dbpedia.org/resource/"
-    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
-    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
-    xmlns:j.7="http://www.ontologydesignpatterns.org/ont/cnlp/dependencies.owl#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.8="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.9="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.10="http://www.ontologydesignpatterns.org/ont/cnlp/coref.owl#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LocalJail">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jail"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Simply">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#majority_1">
+    <j.5:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Majority"/>
+    <j.2:majorityOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Georgians"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jail">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bail_1">
+    <j.2:bailOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_2"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bail"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pay_1">
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Simply"/>
+    <j.0:Asset rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bail_1"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_2"/>
+    <j.2:too rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#poor_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#convict_1">
     <rdf:type rdf:resource="http://dbpedia.org/resource/Conviction"/>
     <j.3:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#majority_1"/>
-    <j.1:convictOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crime_1"/>
-    <j.8:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Never"/>
+    <j.2:convictOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crime_1"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Never"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Convict"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#incarcerate_1">
     <rdf:type rdf:resource="http://dbpedia.org/resource/Prison"/>
-    <j.1:in rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#jail_1"/>
-    <j.6:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Georgians"/>
+    <j.2:in rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#jail_1"/>
+    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Georgians"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Incarcerate"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_48_53_jails">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jails</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">48</j.0:begins>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#jail_1"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jail"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">53</j.0:ends>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Crime">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Crime"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#poor_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Poor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Theme">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Georgians">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Georgian_era"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_4_12_majority">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">majority</rdfs:label>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#majority_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">12</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Majority"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Incarcerate">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Incarcerate_92000000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay">
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Pay_68000000"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#jail_1">
     <rdf:type rdf:resource="http://dbpedia.org/resource/Prison"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LocalJail"/>
     <j.5:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-    <j.8:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Local"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Local"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crime_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Crime"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_70_79_convicted">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">convicted</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">79</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBN"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">70</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#convict_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Convict"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
-    <j.0:hasContent>The majority of Georgians incarcerated in local jails have never been convicted of crime. They are simply too poor to pay their bail.</j.0:hasContent>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_110_114_poor">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">poor</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">114</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Poor"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#poor_1"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">110</j.0:begins>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1">
-    <j.10:coref rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_16_25_Georgians">
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">16</j.0:begins>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Georgians"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">25</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNPS"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georgians</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bail_1">
-    <j.1:bailOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_2"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bail"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Crime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Crime"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_26_38_incarcerated">
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBN"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#incarcerate_1"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">26</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">38</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Incarcerate"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incarcerated</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_99_105_simply">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simply</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">105</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Simply"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#RB"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">99</j.0:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_118_121_pay">
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VB"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pay_1"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">118</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">121</j.0:ends>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pay</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Incarcerate">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Incarcerate_92000000"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#convictOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_128_132_bail">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bail</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bail_1"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bail"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">132</j.0:ends>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">128</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_13_15_of">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">of</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Of"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13</j.0:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/cnlp/dependencies.owl#other_coref">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_90_94_They">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">They</rdfs:label>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_2"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">90</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">94</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#PRP"/>
-    <j.2:hasInterpretant rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#majority_1">
-    <j.5:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Majority"/>
-    <j.1:majorityOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Georgians"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pay_1">
-    <j.8:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Simply"/>
-    <j.6:Asset rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bail_1"/>
-    <j.6:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_2"/>
-    <j.1:too rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#poor_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_26_28_in">
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">26</j.0:begins>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28</j.0:ends>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#In"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Majority">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#patient">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#too">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_42_47_local">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">local</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">42</j.0:begins>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Local"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">47</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_80_82_of">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">of</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Of"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#IN"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">80</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">82</j.0:ends>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay">
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Pay_68000000"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_106_109_too">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">too</rdfs:label>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Too"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#SO"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">109</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">106</j.0:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Poor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Poverty"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#bailOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_83_88_crime">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crime</rdfs:label>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">88</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">83</j.0:begins>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Crime"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crime_1"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bail">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Bail"/>
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Convict">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_122_127_their">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">their</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">122</j.0:begins>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">127</j.0:ends>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#PRP%24"/>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Of"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_2"/>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/cnlp/coref.owl#coref">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Georgians">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Georgian_era"/>
-    <j.3:possibleType rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_59_64_never">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">never</rdfs:label>
-    <j.0:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">59</j.0:begins>
-    <j.2:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Never"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.9:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#RB"/>
-    <j.0:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">64</j.0:ends>
-    <j.0:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#in">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#majorityOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_2">
-    <j.7:other_coref rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Local">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bail">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Bail"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Never">
-    <j.9:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Asset">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Convict">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
 </rdf:RDF>

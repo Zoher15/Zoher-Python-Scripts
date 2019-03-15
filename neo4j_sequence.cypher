@@ -9,6 +9,9 @@
 //SET r.degree=degree
 //return r.degree
 //bi degree
+MATCH (n) DETACH DELETE n
+MATCH (n)-[r]-(m) Return n,r,m
+
 MATCH (n)-[r]-(m)
 WITH n, count(m) as c, collect(r) as rs
 UNWIND rs as r

@@ -1,102 +1,41 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rdf:RDF
-    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/cnlp/dependencies.owl#"
     xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-    xmlns:j.2="http://www.essepuntato.it/2008/12/earmark#"
-    xmlns:j.5="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#"
-    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#"
-    xmlns:j.7="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:j.8="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Theme">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Immigrant">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Immigration"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_4_9_Trump">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trump</rdfs:label>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</j.2:begins>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNP"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">9</j.2:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ChildDetentionCenter">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DetentionCenter"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Administration">
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pay_1">
+    <j.0:Asset rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">458000000</j.0:Asset>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#administration_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#detention_1">
-    <j.3:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#center_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Detention"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DetentionCenter">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Center"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#administration_1">
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Administration"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ceoOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#child_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Child"/>
+    <j.3:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#million"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#center_1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ceo_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ceo"/>
-    <j.4:ceoOf rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">458000000</j.4:ceoOf>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ceo">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Chief_executive_officer"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse">
-    <j.2:hasContent>The Trump administration is paying Southwest Key $458 million to run immigrant child detention centers, and its CEO earns a $1.5 million salary.</j.2:hasContent>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#StringDocuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_49_50_%24">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">$</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dollar_2"/>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#%24"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">50</j.2:ends>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">49</j.2:begins>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dollar_1"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dollar"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dollar">
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#earn_1">
-    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#salary_1"/>
-    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ceo_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Earn"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dollar_2">
-    <j.3:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1500000.0</j.3:hasDataValue>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dollar"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump">
-    <j.1:other_coref rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dollar_1"/>
-    <j.7:possibleType rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasQuantifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_112_115_CEO">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CEO</rdfs:label>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ceo"/>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ceo_1"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">115</j.2:ends>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">112</j.2:begins>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_95_102_centers">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">centers</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Center"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#center_1"/>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NNS"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">102</j.2:ends>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">95</j.2:begins>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#center_1">
+    <j.3:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ImmigrantChildDetentionCenter"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ImmigrantChildDetentionCenter">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ChildDetentionCenter"/>
@@ -104,231 +43,54 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataTypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_10_24_administration">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">administration</rdfs:label>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#administration_1"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</j.2:begins>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Administration"/>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">24</j.2:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_35_48_Southwest+Key">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Southwest Key</rdfs:label>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">35</j.2:begins>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Southwest_key"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">48</j.2:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_108_111_its">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">its</rdfs:label>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">111</j.2:ends>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">108</j.2:begins>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dollar_1"/>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Of"/>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#PRP%24"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Salary">
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Southwest_key">
-    <j.7:possibleType rdf:resource="http://xmlns.com/foaf/0.1/Organisation"/>
-    <j.3:hasQuality rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <j.3:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">458000000</j.3:hasDataValue>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_116_121_earns">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">earns</rdfs:label>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBZ"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">116</j.2:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#earn_1"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">121</j.2:ends>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Earn"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#possibleType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dollar_1">
-    <j.3:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Southwest_key"/>
-    <j.3:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">458000000</j.3:hasDataValue>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dollar"/>
-    <j.3:hasQuality rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/cnlp/dependencies.owl#other_coref">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_65_68_run">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">run</rdfs:label>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">65</j.2:begins>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VB"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">68</j.2:ends>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Run"/>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#run_1"/>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Child">
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Immigrant">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Immigration"/>
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pay_1">
-    <j.0:Asset rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">458000000</j.0:Asset>
-    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#administration_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#refersTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#boxerpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#ends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Detention">
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay">
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Pay_68000000"/>
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#detention_1">
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#center_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Detention"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#run_1">
     <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#administration_1"/>
     <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#center_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Run"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Earn">
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Earn_13051100"/>
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasDeterminer">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_137_143_salary">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salary</rdfs:label>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Salary"/>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#salary_1"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">137</j.2:begins>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">143</j.2:ends>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_28_34_paying">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paying</rdfs:label>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28</j.2:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">34</j.2:ends>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#VBG"/>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pay_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#denotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Center">
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#hasContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ontologydesignpatterns.org/cp/owl/semiotics.owl#hasInterpretant">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ChildDetentionCenter">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DetentionCenter"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_69_78_immigrant">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immigrant</rdfs:label>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Immigrant"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">78</j.2:ends>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">69</j.2:begins>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#JJ"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DetentionCenter">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Center"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#administration_1">
-    <j.3:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Administration"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#child_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Child"/>
-    <j.8:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#million"/>
-    <j.3:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#center_1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ceo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Chief_executive_officer"/>
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#n"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#center_1">
-    <j.8:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ImmigrantChildDetentionCenter"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#pennpos">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/earmark#begins">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_79_84_child">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">child</rdfs:label>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">79</j.2:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">84</j.2:ends>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#child_1"/>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Child"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#salary_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Salary"/>
-    <j.8:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#million"/>
-    <j.3:associatedWith rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1500000.0</j.3:associatedWith>
-    <j.8:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
+    <j.3:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#million"/>
+    <j.1:associatedWith rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1500000.0</j.1:associatedWith>
+    <j.3:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Earn">
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Earn_13051100"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Run">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-    <j.6:boxerpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#v"/>
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Run_51032000"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#offset_85_94_detention">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">detention</rdfs:label>
-    <j.2:refersTo rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#docuverse"/>
-    <j.2:ends rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">94</j.2:ends>
-    <j.5:denotes rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#detention_1"/>
-    <j.5:hasInterpretant rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Detention"/>
-    <j.2:begins rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">85</j.2:begins>
-    <rdf:type rdf:resource="http://www.essepuntato.it/2008/12/earmark#PointerRange"/>
-    <j.6:pennpos rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/pos.owl#NN"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ceo_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ceo"/>
+    <j.2:ceoOf rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">458000000</j.2:ceoOf>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/vn/abox/role/Asset">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Southwest_key">
+    <j.1:hasQuality rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <j.1:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">458000000</j.1:hasDataValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#earn_1">
+    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#salary_1"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ceo_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Earn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dollar_1">
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Southwest_key"/>
+    <j.1:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">458000000</j.1:hasDataValue>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dollar"/>
+    <j.1:hasQuality rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dollar_2">
+    <j.1:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1500000.0</j.1:hasDataValue>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dollar"/>
   </rdf:Description>
 </rdf:RDF>

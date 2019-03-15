@@ -27,7 +27,7 @@ def fred_annotate(row):
 	text=row['claim_text']
 	claimid=row['claimID']
 	filename=str(claimid)+".rdf"
-	data={'text':text}
+	data={'text':text,'semantic-subgraph':True}
 	r=requests.get(url,params=data,headers=header)
 	f = open(filename, "w")
 	f.write("<?xml version='1.0' encoding='UTF-8'?>\n"+r.text)
@@ -39,7 +39,7 @@ start=time.time()
 start2=time.time()
 daysec=86400
 minsec=60
-init=6407
+init=0
 for i in range(init,len(data)):
 	dif=abs(time.time()-start)
 	diff=abs(daysec-dif)
