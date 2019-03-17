@@ -2,7 +2,8 @@
 //MATCH (n) WITH n,
 //MATCH (n)-[r]->() with n,r,size((n)-[r]->()) as degree
 //RETURN degree
-
+MATCH (n)-[r]-(n)
+delete r
 //MATCH (n) WITH collect(n) as nodes
 //unwind nodes as node
 //MATCH (node)-[r]-() with r,size((node)-[r]->()) as degree
@@ -11,7 +12,21 @@
 //bi degree
 MATCH (n) DETACH DELETE n
 MATCH (n)-[r]-(m) Return n,r,m
+///Node Degree
+MATCH (n)-[r]-(m)
+WITH n, count(m) as c, collect(r) as rs
+UNWIND rs as r
+set n.degree=log(c)
+RETURN n.degree
 
+///Relationship Degree
+MATCH (n)-[r]-(m)
+WITH n,m, collect(r) as rs
+UNWIND rs as r
+set r.degree=(n.degree+m.degree)/2
+RETURN r.degree
+
+///
 MATCH (n)-[r]-(m)
 WITH n, count(m) as c, collect(r) as rs
 UNWIND rs as r
@@ -19,7 +34,7 @@ set n.sumdegree=1+log(c)
 set r.degree=1+log(c)
 RETURN r.degree
 //outdegree
-MATCH (n)-[r]->(m)
+MATCH (n)-[r]-(m)
 WITH n, count(m) as c, collect(r) as rs
 UNWIND rs as r
 set n.outdegree=1+log(c)
@@ -33,15 +48,28 @@ set m.indegree=1+log(c)
 set r.degree=1+log(c)
 RETURN r.degree
 ///Shortes Path Stream
-MATCH (start{uri:'http://dbpedia.org/resource/Donald_Trump'}), (end{uri:'http://dbpedia.org/resource/Barack_Obama'})
-CALL algo.shortestPath.stream(start, end, 'degree')
-YIELD nodeId, cost
-RETURN algo.getNodeById(nodeId).name AS name, cost
+//MATCH (start{uri:'http://dbpedia.org/resource/Donald_Trump'}), (end{uri:'http://dbpedia.org/resource/Barack_Obama'})
+//CALL algo.shortestPath.stream(start, end, 'degree')
+//YIELD nodeId, cost
+//RETURN algo.getNodeById(nodeId).name AS name, cost
 ///
-MATCH (start{uri:'http://dbpedia.org/resource/Donald_Trump'}), (end{uri:'http://dbpedia.org/resource/Vladimir_Putin'})
+MATCH (start{uri:'http://dbpedia.org/resource/Michelle_Obama'}), (end{uri:'http://dbpedia.org/resource/Ivanka_Trump'})
 CALL algo.shortestPath(start, end, 'degree',{write:true,writeProperty:'sssp',direction:'both'})
 YIELD writeMillis,loadMillis,nodeCount, totalCost
+RETURN writeMillis,loadMillis,nodeCount, totalCost
+MATCH (n) WHERE EXISTS(n.sssp) remove n.sssp RETURN n
+//Shortest Path to People (useless goes through person)
+MATCH (n)-[r*1..2]-(m{uri:'http://schema.org/Person'}) where n.uri starts with "http://dbpedia.org/resource/"  with collect(n) as persons
+unwind persons as person
+MATCH (start{uri:'http://dbpedia.org/resource/Donald_Trump'})
+CALL algo.shortestPath(start,person, 'degree',{write:true,writeProperty:'sssp',direction:'both'})
+YIELD writeMillis,loadMillis,nodeCount, totalCost
 RETURN writeMillis,loadMillis,nodeCount,totalCost
+///ALl shortest paths
+MATCH (start{uri:'http://dbpedia.org/resource/Donald_Trump'})
+CALL algo.shortestPaths(start,'degree',{write:true,writeProperty:'sssp',direction:'both'})
+YIELD nodeCount
+RETURN nodeCount
 ///Query the sssp
 MATCH (n) WHERE EXISTS(n.sssp) RETURN n
 ///Delete sssp
@@ -91,6 +119,7 @@ MATCH (n)-[r]-(n) delete r
 //1 Import
 CREATE INDEX ON :Resource(uri)//prestep
 CALL semantics.importRDF("file:///C:/Users/zoya/Downloads/claimreviews_db.rdf","RDF/XML", { shortenUrls: false, typesToLabels: false, commitSize: 25000 })
+CALL semantics.importRDF("file:///gpfs/home/z/k/zkachwal/Carbonate/Downloads/claimreviews_db.rdf","RDF/XML", { shortenUrls: false, typesToLabels: false, commitSize: 25000 })
 //2 labeling the nodes
 MATCH (n) with n, SPLIT(n.uri,"/")[-1] as name SET n.label=name return n.label
 MATCH (n) with n, SPLIT(n.label,"#")[-1] as name SET n.label=name return n.label
@@ -98,18 +127,18 @@ MATCH (n) with n, SPLIT(n.label,"#")[-1] as name SET n.label=name return n.label
 MATCH ()-[r]-() with r, SPLIT(type(r),"/")[-1] as name SET r.label=name return r.label
 MATCH ()-[r]-() with r, SPLIT(r.label,"#")[-1] as name SET r.label=name return r.label
 //5 merging nodes with sameAs relationships
-MATCH (n)-[r:`http://www.w3.org/2002/07/owl#sameAs`]->(n)
-delete r
+//MATCH (n)-[r:`http://www.w3.org/2002/07/owl#sameAs`]->(n)
+//delete r
 //
-MATCH (n)-[r1:`http://www.w3.org/2002/07/owl#sameAs`]->(m) with collect([n,m]) as events
+MATCH (n)-[r1:`http://www.w3.org/2002/07/owl#sameAs`]->(m) where m.uri starts with 'http://dbpedia.org/resource/' and toLower(n.label)=toLower(m.label) with collect([n,m]) as events
 unwind events as event
 CALL apoc.refactor.mergeNodes([event[0],event[1]],{properties:"overwrite",mergeRels:true}) yield node
 return node
 //6 merging nodes with equivalentClass relationships
-MATCH (n)-[r:`http://www.w3.org/2002/07/owl#equivalentClass`]->(n)
-delete r
+//MATCH (n)-[r:`http://www.w3.org/2002/07/owl#equivalentClass`]->(n)
+//delete r
 //
-MATCH (n)-[r1:`http://www.w3.org/2002/07/owl#equivalentClass`]->(m) with collect([n,m]) as events
+MATCH (n)-[r1:`http://www.w3.org/2002/07/owl#equivalentClass`]->(m) where m.uri starts with 'http://dbpedia.org/resource/' with collect([n,m]) as events
 unwind events as event
 CALL apoc.refactor.mergeNodes([event[0],event[1]],{properties:"overwrite",mergeRels:true}) yield node
 return node
@@ -148,7 +177,12 @@ MATCH ()-[r:`http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#hasD
 OPTIONAL MATCH (m)-[r1]->(o)
 delete r1,o,r,m
 
-MATCH (n) with collect([n,n.uri]) as events
+MATCH (n) with collect(n) as events
 unwind events as event
-set event[0].label=semantics.getIRILocalName(event[1])
-return event
+set event.label=semantics.getIRILocalName(event.uri)
+return even.label
+
+
+MATCH (n) with collect(n) as events
+foreach(event in events|
+	return semantics.getIRILocalName(event.uri))

@@ -1,0 +1,4 @@
+#Selecting claims that contains entities like "Donald Trump" and "Hillary Clinton"
+select * from claim c inner join claim_entity ce1 on c.claimID=ce1.claimID inner join claim_entity ce2 on ce1.claimID=ce2.claimID where ce1.entityID in (SELECT entityID from entity where entityID!=35 and entityID!=2624 and entity_text like "Donald Trump%") and ce2.entityID in (SELECT entityID from entity where entity_text like "Hillary Clinton%")
+#Find count of co-occurring entities to Donald Trump
+SELECT entity_text,COUNT(*) as count from entity e inner join claim_entity ce on ce.entityID=e.entityID where claimID IN (SELECT DISTINCT cl.claimID FROM centralifact.claim cl inner join claim_entity ce on cl.claimID=ce.claimID inner join entity e on e.entityID=ce.entityID where e.entity_text like "Donald Trump%" and e.entityID!=35 and e.entityID!=2624) GROUP BY e.entity_text
