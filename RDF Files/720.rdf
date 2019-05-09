@@ -5,7 +5,8 @@
     xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
     xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.3="http://schema.org/"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
+    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sylvester_stallone%26%23039"
     xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PornFilm">
@@ -25,21 +26,18 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#FirstScreenEffort">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ScreenEffort"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sylvester_stallone">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Sylvester_Stallone"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#film_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#PornFilm"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#role_1">
-    <j.2:roleOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#effort_1"/>
     <j.2:in rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#film_1"/>
+    <j.2:roleOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sylvester_stallone%26%23039_1"/>
     <j.1:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</j.1:hasDataValue>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Role"/>
     <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Of">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Sylvester_Stallone"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sylvester_stallone%26%23039_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sylvester_stallone%26%23039"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Star">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
@@ -49,18 +47,28 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataTypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#effort_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#FirstScreenEffort"/>
     <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
-    <j.2:firstScreenEffortOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Sylvester_stallone"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#FirstScreenEffort"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/Sylvester_Stallone">
-    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ScreenEffort">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Effort"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Sylvester_Stallone"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#screen_1">
+    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#sylvester_stallone%26%23039"/>
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#effort_1"/>
+    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#one"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Screen"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#s_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
+    <j.3:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#sylvester_stallone%26%23039_1"/>
+    <j.3:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#effort_1"/>
   </rdf:Description>
 </rdf:RDF>

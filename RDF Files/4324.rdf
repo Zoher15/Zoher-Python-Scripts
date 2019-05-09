@@ -5,8 +5,7 @@
     xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
     xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"
-    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Add">
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Add_37070000"/>
@@ -14,6 +13,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#series_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#TelevisionSeries"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/framenet/abox/frame/%23039"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Criticize">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
@@ -26,8 +26,7 @@
     <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lack_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crewman_1">
-    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Crewman"/>
+    <j.3:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SovietCrewman"/>
     <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Soviet"/>
   </rdf:Description>
@@ -44,35 +43,29 @@
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Crewman"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/Soviet_Union">
-    <rdfs:subClassOf rdf:resource="http://schema.org/Country"/>
     <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Country"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#TelevisionSeries">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Television_program"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Series"/>
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Series"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Chekov">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Pavel_Chekov"/>
-    <owl:sameAs rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#newspaper_1"/>
-    <owl:sameAs rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crewman_1"/>
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#Ensign"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#newspaper_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Newspaper"/>
-    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+    <j.3:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#television_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Television"/>
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#series_1"/>
-    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Star_trek">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Star_Trek"/>
+    <j.3:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#Ensign">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Pavel_Chekov"/>
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Ensign_(rank)"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Pavel_Chekov"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Communist">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Communism"/>
@@ -80,13 +73,8 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#lack_1">
     <j.2:lackOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#crewman_1"/>
+    <j.3:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lack"/>
-    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1">
-    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Star_trek"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
-    <j.3:Of rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#series_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pravda">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Pravda"/>
@@ -95,19 +83,20 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#editorial_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Editorial"/>
-    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#an"/>
+    <j.3:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#an"/>
     <j.2:in rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pravda"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Character"/>
     <j.2:characterOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Chekov"/>
-    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+    <j.3:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#add_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Add"/>
-    <j.2:because rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#criticize_1"/>
     <j.0:Topic rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#character_1"/>
-    <j.0:Recipient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
+    <j.2:because rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#criticize_1"/>
+    <j.0:Recipient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Star_trek%26%23039"/>
+    <j.0:Recipient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#series_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Add"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#U.s.s._enterprise.">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Board"/>

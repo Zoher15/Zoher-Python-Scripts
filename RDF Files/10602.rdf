@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.3="http://schema.org/"
+    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#WindPower">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Wind_power"/>
+    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Wind"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Power"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Texas">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Texas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Texas">
+    <rdf:type rdf:resource="http://schema.org/AdministrativeArea"/>
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#power_1">
+    <j.1:cheaperThan rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fuel_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#WindPower"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DirtyFossilFuel">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#FossilFuel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#FossilFuel">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fuel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fuel_1">
+    <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dirty"/>
+    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+    <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fossil"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#DirtyFossilFuel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1">
+    <j.1:hereIn rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Texas"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
+    <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Already"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#power_1"/>
+    <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Now"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#fuel_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fossil">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Fossil_fuel"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Fossil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Power">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/The_Power_Is_On"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#wind_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Wind"/>
+    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#power_1"/>
+  </rdf:Description>
+</rdf:RDF>

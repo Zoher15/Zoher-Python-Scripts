@@ -5,9 +5,9 @@
     xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
     xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.4="http://www.w3.org/2001/XMLSchema#"
-    xmlns:j.3="http://dbpedia.org/resource/"
-    xmlns:j.5="http://schema.org/"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
+    xmlns:j.5="http://www.w3.org/2001/XMLSchema#"
+    xmlns:j.4="http://dbpedia.org/resource/"
     xmlns:j.6="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#date_1">
@@ -27,18 +27,14 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#birthday_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Birthday"/>
-    <j.2:birthdayOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vladimir_lenin"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#coincide_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Coincide"/>
     <j.0:Patient1 rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#date_1"/>
-    <j.0:Patient2 rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#birthday_1"/>
+    <j.0:Patient2 rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vladimir_lenin%26%23039"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#April_22">
     <rdf:type rdf:resource="http://dbpedia.org/resource/Earth_Day"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Vladimir_lenin">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Vladimir_Lenin"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#april_22_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#April_22"/>
@@ -46,14 +42,22 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Day">
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Earth"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Unicorn_killer">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Ira_Einhorn"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#choose_1">
-    <j.2:as rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#april_22_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Choose"/>
     <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Unicorn_killer"/>
     <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#date_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Choose"/>
+    <j.2:as rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#april_22_1"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/resource/Vladimir_Lenin">
-    <rdf:type rdf:resource="http://schema.org/Person"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#s_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
+    <j.3:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#date_1"/>
+    <j.3:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#birthday_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Choose">
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Choose_13051000"/>

@@ -6,29 +6,23 @@
     xmlns:j.3="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
     xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"
     xmlns:j.4="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
-    xmlns:j.6="http://schema.org/"
+    xmlns:j.5="http://schema.org/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Donald_Trump"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pay_1">
-    <j.4:recipient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#informant_1"/>
-    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Obama"/>
-    <j.4:theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_2"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Informant">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Informant"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pay_1">
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Obama"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Pay"/>
+    <j.0:Asset rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#informant_1"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1">
-    <j.3:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#do_1"/>
-    <j.3:involves rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1000000</j.3:involves>
+    <j.3:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#event_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
-    <j.3:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#pay_1"/>
-    <j.3:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_2"/>
-    <j.3:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#informant_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Do">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
@@ -54,27 +48,24 @@
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#do_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Do"/>
     <j.4:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#informant_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Do"/>
     <j.2:to rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Trump"/>
     <j.4:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Obama"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#say_1">
-    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_1"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Obama"/>
     <j.0:Topic rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Say"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27_2">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%27"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#event_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#informant_1">
     <j.2:over rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1000000</j.2:over>
     <j.1:hasQuality rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fbi"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Informant"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Fbi"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#dollar_1">
     <j.1:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1000000</j.1:hasDataValue>

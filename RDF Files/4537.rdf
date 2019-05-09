@@ -7,12 +7,6 @@
     xmlns:j.2="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#inauguration_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Inauguration"/>
-    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Presidential"/>
-    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#First"/>
-    <j.3:inaugurationOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#President-elect_donald_trump"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Skip">
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Skip_51032000"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
@@ -21,15 +15,27 @@
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/United_States_presidential_inauguration"/>
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/First_inauguration_of_George_Washington"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SInauguration">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Inauguration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Donald_trump%26%23039">
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Presidential"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#First"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SInauguration"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#President-elect"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#skip_1">
-    <j.2:hasModality rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Necessary"/>
-    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#inauguration_1"/>
-    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#John_lewis"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Skip"/>
+    <j.2:hasModality rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Necessary"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#John_lewis"/>
+    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Donald_trump%26%23039"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#John_lewis">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/John_Lewis_(Georgia_politician)"/>
-    <j.1:hasRole rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#Representative"/>
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#Representative"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#President-elect">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/President-elect_of_the_United_States"/>
   </rdf:Description>
 </rdf:RDF>

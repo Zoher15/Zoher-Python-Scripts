@@ -11,13 +11,9 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#financier_1">
     <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Roy_moore">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Roy_Moore"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Politician"/>
-    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Alabama"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Senate">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/United_States_Senate"/>
+    <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#MainFinancier">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Financier"/>
@@ -25,7 +21,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#campaign_1">
     <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Senate"/>
-    <j.1:campaignOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Roy_moore"/>
+    <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Campaign"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Owner">
@@ -35,30 +31,26 @@
     <rdf:type rdf:resource="http://schema.org/AdministrativeArea"/>
     <rdf:type rdf:resource="http://schema.org/Place"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Politician">
-    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Politics"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1">
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Campaign"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
     <j.1:union rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_2"/>
-    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Roy_moore"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
-    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_2"/>
-    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Taco_bell"/>
     <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#campaign_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Main">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_2">
-    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Taco_bell"/>
     <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#campaign_1"/>
-    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Roy_moore"/>
-    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Campaign"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Taco_bell">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Taco_Bell"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#MainFinancier"/>
+    <j.1:mainFinancierOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Roy_moore%26%23039"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <j.1:mainFinancierOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#campaign_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Owner"/>
@@ -68,6 +60,10 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#MainFinancier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Roy_moore%26%23039">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Politician"/>
+    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Alabama"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/United_States_Senate">
     <rdf:type rdf:resource="http://schema.org/Organization"/>

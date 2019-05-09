@@ -9,16 +9,16 @@
     xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#NationalSecurityOfficer">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SecurityOfficer"/>
     <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#NationalSecurity"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SecurityOfficer"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Democratic_presidents">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Democratic_Party_(United_States)"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#security_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Security"/>
-    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#officer_1"/>
     <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#a"/>
+    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#officer_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Security"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Become">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
@@ -30,30 +30,31 @@
   <rdf:Description rdf:about="http://dbpedia.org/resource/Republican_Party_(United_States)">
     <rdf:type rdf:resource="http://schema.org/Organization"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Andy_kim">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Andy_Kim"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SecurityOfficer">
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Officer"/>
     <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Security"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Officer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%5D">
+    <j.0:hasRole rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%5B_andy_kim"/>
+    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%5B_andy_kim"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#officer_1">
-    <j.1:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Republican"/>
-    <j.1:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#democratic_presidents_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#NationalSecurityOfficer"/>
+    <j.1:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#democratic_presidents_1"/>
+    <j.1:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Republican"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Republican">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Republican_Party_(United_States)"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#democratic_presidents_1">
-    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Democratic_presidents"/>
+    <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#National">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#become_1">
-    <j.2:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Andy_kim"/>
+    <j.2:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#%5D"/>
     <j.2:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#officer_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Become"/>
   </rdf:Description>

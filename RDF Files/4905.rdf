@@ -8,7 +8,8 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:j.4="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
     xmlns:j.5="http://schema.org/"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Obama_administration">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Barack_Obama"/>
   </rdf:Description>
@@ -19,19 +20,20 @@
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Male"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Criticize">
-    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Criticize_33000000"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Criticize_33000000"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#criticize_1">
     <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#President"/>
-    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#male_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Criticize"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#male_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/Kabul">
-    <rdf:type rdf:resource="http://schema.org/Place"/>
     <rdf:type rdf:resource="http://schema.org/City"/>
+    <rdf:type rdf:resource="http://schema.org/Place"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#birthday_1">
+    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#241st"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Birthday"/>
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ball_1"/>
   </rdf:Description>
@@ -60,20 +62,19 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#BirthdayBall">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/United_States_Marine_Corps_birthday_ball"/>
-    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ball"/>
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Birthday"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Ball"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Afghanistan">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Afghanistan"/>
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/War_in_Afghanistan_(2001â€“14)"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Marine_corps">
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#In">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/United_States_Marine_Corps"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Afghanistan">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/War_in_Afghanistan_(2001â€“14)"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Afghanistan"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ball_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#241stBirthdayBall"/>
     <j.2:locatedIn rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Kabul"/>
-    <j.3:stBirthdayBallOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Marine_corps"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#241stBirthdayBall"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dakota_meyer">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Dakota_Meyer"/>
@@ -81,10 +82,11 @@
     <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Medal_of_honor"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disinvit_1">
-    <j.2:because rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#criticize_1"/>
-    <j.4:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dakota_meyer"/>
-    <j.4:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Obama_administration"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Disinvit"/>
+    <j.4:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Obama_administration"/>
+    <j.4:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Dakota_meyer"/>
+    <j.2:because rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#criticize_1"/>
     <j.2:from rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#ball_1"/>
+    <j.2:from rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Marine_corps%26%23039"/>
   </rdf:Description>
 </rdf:RDF>

@@ -16,8 +16,9 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#arrest_1">
     <rdf:type rdf:resource="http://dbpedia.org/resource/Arrest"/>
     <j.2:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#murder_1"/>
-    <j.2:after rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#participate_1"/>
     <j.3:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#brother_1"/>
+    <j.2:after rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#participate_1"/>
+    <j.3:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Al_sharpton%26%23039"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Arrest"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/Alabama">
@@ -28,13 +29,17 @@
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Rally"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rally_1">
-    <j.2:lifeRallyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#LifeRally"/>
+    <j.2:lifeRallyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_2"/>
     <j.2:locatedIn rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Alabama"/>
+    <j.2:lifeRallyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#brother_1">
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Brother"/>
-    <j.2:brotherOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Al_sharpton"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SBrother"/>
+    <j.1:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#SBrother">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Brother"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Alabama">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Alabama"/>
@@ -44,11 +49,15 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#participate_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Participate"/>
+    <j.0:Actor rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Al_sharpton%26%23039"/>
     <j.0:Theme rdf:datatype="http://www.w3.org/2001/XMLSchema#date">0001-03-01</j.0:Theme>
     <j.2:for rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#rally_1"/>
     <j.0:Actor rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#brother_1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#person_2">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#murder_1">
@@ -62,8 +71,5 @@
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Participate">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
     <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Participate_73000200"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Al_sharpton">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Al_Sharpton"/>
   </rdf:Description>
 </rdf:RDF>

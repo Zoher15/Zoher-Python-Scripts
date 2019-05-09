@@ -5,22 +5,22 @@
     xmlns:j.1="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:j.2="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
-    xmlns:j.3="http://schema.org/"
-    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#status_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tax-exemptStatus"/>
-    <j.1:tax-exemptStatusOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Church_of_scientology"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#supreme_court_1">
-    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Supreme_court"/>
+    <j.3:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#revoke_1">
-    <j.2:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#supreme_court_1"/>
-    <j.1:in rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-03-01</j.1:in>
-    <j.2:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#status_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Revoke"/>
+    <j.2:theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Church_of_scientology%26%23039"/>
+    <j.2:recipient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#supreme_court_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Supreme_court">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Supreme_Court_of_the_United_States"/>
@@ -32,21 +32,15 @@
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Tax_exemption"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/resource/Scientology">
-    <rdf:type rdf:resource="http://schema.org/Organization"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/resource/Church_of_Scientology">
-    <rdf:type rdf:resource="http://schema.org/Organization"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Of">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Scientology"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#s_1">
+    <j.2:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#status_1"/>
+    <j.2:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#supreme_court_1"/>
+    <j.1:in rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-03-01</j.1:in>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tax-exemptStatus">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Tax_exemption"/>
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Status"/>
     <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tax-exempt"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Church_of_scientology">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Church_of_Scientology"/>
   </rdf:Description>
 </rdf:RDF>

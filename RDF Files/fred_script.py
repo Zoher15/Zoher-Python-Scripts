@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import requests
 import re
 from pprint import pprint
@@ -14,15 +16,15 @@ header={"Accept":"application/rdf+xml","Authorization":"Bearer 56a28f54-7918-3fd
 graph = Graph()
 # graph.parse("2484.rdf",format='application/rdf+xml')
 # graph.serialize(destination='cl_db.rdf', format='application/rdf+xml')
-try:
-	errorclaimid=list(np.load("Error500_claimID.npy"))
-except FileNotFoundError:
-	errorclaimid=[]
-try:
-	graph.parse("claimreviews_db.rdf",format='application/rdf+xml')
-except FileNotFoundError:
-	pass
-
+# try:
+# 	errorclaimid=list(np.load("Error500_claimID.npy"))
+# except FileNotFoundError:
+# 	errorclaimid=[]
+# try:
+# 	graph.parse("claimreviews_db.rdf",format='application/rdf+xml')
+# except FileNotFoundError:
+# 	pass
+errorclaimid=[]
 def fred_annotate(row):
 	text=row['claim_text']
 	claimid=row['claimID']
@@ -33,8 +35,9 @@ def fred_annotate(row):
 	f.write("<?xml version='1.0' encoding='UTF-8'?>\n"+r.text)
 	return(r.status_code,r.text,filename)
 
-data=pd.read_csv("claimreviews_db.csv",index_col=0)
-data=data.loc[data['fact_checkerID']>1].reset_index(drop=True)
+data=pd.read_csv("claimreviews_db2.csv",index_col=0)
+
+#fred starts
 start=time.time()
 start2=time.time()
 daysec=86400
@@ -59,7 +62,7 @@ for i in range(init,len(data)):
 			if "You have exceeded your quota" not in rtext and "Runtime Error" not in rtext and "Service Unavailable" not in rtext:
 				if rcode in range(100,500) and rtext:
 					graph.parse(filename,format='application/rdf+xml')
-					graph.serialize(destination='claimreviews_db.rdf', format='application/rdf+xml')
+					graph.serialize(destination='claimreviews_db2.rdf', format='application/rdf+xml')
 				else:
 					errorclaimid.append(filename.strip(".rdf"))
 					np.save("Error500_claimID.npy",errorclaimid)

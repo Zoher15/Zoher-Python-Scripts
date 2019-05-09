@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
+    xmlns:j.4="http://dbpedia.org/resource/"
+    xmlns:j.5="http://schema.org/"
+    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#prescribe_1">
+    <rdf:type rdf:resource="http://dbpedia.org/resource/Prescription_drug"/>
+    <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#First"/>
+    <j.3:recipient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Elizabeth_warren"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Prescribe"/>
+    <j.2:in rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-01-01</j.2:in>
+    <j.3:theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#drug_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Elizabeth_warren">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Elizabeth_Warren"/>
+    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#Senator"/>
+    <j.0:hasRole rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#Senator"/>
+    <j.2:on rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Risperdal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Drug">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Drug"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/boxer/title.owl#Senator">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/United_States_Senate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#drug_1">
+    <j.6:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Drug"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Risperdal">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Risperidone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1">
+    <j.1:involves rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-01-01</j.1:involves>
+    <j.2:since rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#prescribe_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
+    <j.1:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#prescribe_1"/>
+    <j.1:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Elizabeth_warren"/>
+    <j.1:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Risperdal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/United_States_Senate">
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Prescribe">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
+</rdf:RDF>

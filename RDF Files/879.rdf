@@ -8,29 +8,24 @@
     xmlns:j.3="http://schema.org/"
     xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bob_mueller">
-    <j.0:hasRole rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Counsel"/>
-    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Counsel"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Arrest">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russia">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Russia"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Russia">
+    <rdf:type rdf:resource="http://schema.org/Place"/>
+    <rdf:type rdf:resource="http://schema.org/Country"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#arrest_1">
     <j.2:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#united_states_marshals_1"/>
     <j.2:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tony_podesta"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Arrest"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/resource/Russia">
-    <rdf:type rdf:resource="http://schema.org/Place"/>
-    <rdf:type rdf:resource="http://schema.org/Country"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#probe_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Probe"/>
     <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Russia"/>
-    <j.1:probeOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bob_mueller"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#relation_1">
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Relation"/>
@@ -45,17 +40,29 @@
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/United_States_Marshals_Service"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#special_1">
-    <j.2:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#relation_1"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Special"/>
-    <j.2:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#probe_1"/>
+    <j.2:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bob_mueller%26%23039"/>
+    <j.2:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#relation_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Bob_mueller%26%23039">
+    <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Counsel"/>
+    <j.0:hasRole rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Counsel"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#united_states_marshals_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#United_states_marshals"/>
     <j.4:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
     <j.1:in rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#relation_1"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#United_states_marshals"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tony_podesta">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Tony_Podesta"/>
     <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Lobbyist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#s_1">
+    <j.2:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Tony_podesta"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#S"/>
+    <j.2:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#probe_1"/>
   </rdf:Description>
 </rdf:RDF>

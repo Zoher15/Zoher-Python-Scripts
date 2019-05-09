@@ -8,43 +8,52 @@
     xmlns:j.3="http://schema.org/"
     xmlns:j.4="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Civil_war">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/American_Civil_War"/>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#war_1">
+    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CivilWar"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Disavow">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#confederacy_1">
-    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
-    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Confederacy"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jefferson_davis">
     <owl:sameAs rdf:resource="http://dbpedia.org/resource/Jefferson_Davis"/>
     <j.0:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Robert_e._lee"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Civil">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/American_Civil_War">
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#confederacy_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Confederacy"/>
+    <j.4:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Confederacy">
     <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Confederate_States_of_America"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Robert_e._lee">
-    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Robert_E._Lee"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/Jefferson_Davis">
     <rdf:type rdf:resource="http://schema.org/Person"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Robert_e._lee">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Robert_E._Lee"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#CivilWar">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/American_Civil_War"/>
+    <j.0:hasQuality rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Civil"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#War"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#disavow_1">
     <j.2:patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#confederacy_1"/>
+    <j.1:after rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#war_1"/>
     <j.2:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Jefferson_davis"/>
-    <j.1:after rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Civil_war"/>
     <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Disavow"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/resource/Robert_E._Lee">
-    <rdf:type rdf:resource="http://schema.org/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dbpedia.org/resource/Confederate_States_of_America">
     <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
     <rdfs:subClassOf rdf:resource="http://schema.org/Country"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://dbpedia.org/resource/American_Civil_War">
-    <rdf:type rdf:resource="http://schema.org/Event"/>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Robert_E._Lee">
+    <rdf:type rdf:resource="http://schema.org/Person"/>
   </rdf:Description>
 </rdf:RDF>

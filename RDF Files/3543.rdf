@@ -1,154 +1,102 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
-<title>Error 500 org.openjena.riot.RiotException: [line: 1, col: 1 ] Out of place: [KEYWORD:Error]</title>
-</head>
-<body><h2>HTTP ERROR 500</h2>
-<p>Problem accessing /fred/. Reason:
-<pre>    org.openjena.riot.RiotException: [line: 1, col: 1 ] Out of place: [KEYWORD:Error]</pre></p><h3>Caused by:</h3><pre>com.hp.hpl.jena.shared.JenaException: org.openjena.riot.RiotException: [line: 1, col: 1 ] Out of place: [KEYWORD:Error]
-	at org.openjena.riot.system.JenaReaderRIOT.readImpl(JenaReaderRIOT.java:136)
-	at org.openjena.riot.system.JenaReaderRIOT.read(JenaReaderRIOT.java:79)
-	at com.hp.hpl.jena.rdf.model.impl.ModelCom.read(ModelCom.java:226)
-	at org.apache.clerezza.rdf.jena.parser.JenaParserProvider.parse(JenaParserProvider.java:68)
-	at org.apache.clerezza.rdf.core.serializedform.Parser.parse(Parser.java:191)
-	at org.apache.clerezza.rdf.core.serializedform.Parser.parse(Parser.java:162)
-	at org.apache.clerezza.rdf.core.serializedform.Parser.parse(Parser.java:128)
-	at it.cnr.istc.stlab.tipalo.drt.fred.Fred.generate(Fred.java:574)
-	at it.cnr.istc.stlab.kapi.ontologygenerator.fred.SimpleFREDWrapper.read(SimpleFREDWrapper.java:498)
-	at it.cnr.istc.stlab.tipalo.drt.fred.web.resources.FREDResource.handleRequest(FREDResource.java:694)
-	at it.cnr.istc.stlab.tipalo.drt.fred.web.resources.FREDResource.getRDF(FREDResource.java:183)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:622)
-	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:172)
-	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:67)
-	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:265)
-	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:83)
-	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:133)
-	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:71)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:996)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:947)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:938)
-	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:399)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:478)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:663)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
-	at org.apache.felix.http.base.internal.handler.ServletHandler.doHandle(ServletHandler.java:91)
-	at org.apache.felix.http.base.internal.handler.ServletHandler.handle(ServletHandler.java:77)
-	at org.apache.felix.http.base.internal.dispatch.ServletPipeline.handle(ServletPipeline.java:42)
-	at org.apache.felix.http.base.internal.dispatch.InvocationFilterChain.doFilter(InvocationFilterChain.java:49)
-	at org.apache.felix.http.base.internal.dispatch.HttpFilterChain.doFilter(HttpFilterChain.java:33)
-	at org.apache.felix.http.base.internal.dispatch.FilterPipeline.dispatch(FilterPipeline.java:48)
-	at org.apache.felix.http.base.internal.dispatch.Dispatcher.dispatch(Dispatcher.java:39)
-	at org.apache.felix.http.base.internal.DispatcherServlet.service(DispatcherServlet.java:55)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
-	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
-	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:390)
-	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
-	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
-	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
-	at org.mortbay.jetty.Server.handle(Server.java:326)
-	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:536)
-	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:915)
-	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:539)
-	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
-	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:405)
-	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
-	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
-Caused by: org.openjena.riot.RiotException: [line: 1, col: 1 ] Out of place: [KEYWORD:Error]
-	at org.openjena.riot.ErrorHandlerFactory$ErrorHandlerStd.fatal(ErrorHandlerFactory.java:103)
-	at org.openjena.riot.lang.LangBase.raiseException(LangBase.java:205)
-	at org.openjena.riot.lang.LangBase.exceptionDirect(LangBase.java:198)
-	at org.openjena.riot.lang.LangBase.exception(LangBase.java:191)
-	at org.openjena.riot.lang.LangTurtleBase.triplesSameSubject(LangTurtleBase.java:233)
-	at org.openjena.riot.lang.LangTurtle.oneTopLevelElement(LangTurtle.java:34)
-	at org.openjena.riot.lang.LangTurtleBase.runParser(LangTurtleBase.java:132)
-	at org.openjena.riot.lang.LangBase.parse(LangBase.java:75)
-	at org.openjena.riot.system.JenaReaderTurtle2.readWorker(JenaReaderTurtle2.java:34)
-	at org.openjena.riot.system.JenaReaderRIOT.readImpl(JenaReaderRIOT.java:124)
-	... 48 more
-</pre>
-<h3>Caused by:</h3><pre>org.openjena.riot.RiotException: [line: 1, col: 1 ] Out of place: [KEYWORD:Error]
-	at org.openjena.riot.ErrorHandlerFactory$ErrorHandlerStd.fatal(ErrorHandlerFactory.java:103)
-	at org.openjena.riot.lang.LangBase.raiseException(LangBase.java:205)
-	at org.openjena.riot.lang.LangBase.exceptionDirect(LangBase.java:198)
-	at org.openjena.riot.lang.LangBase.exception(LangBase.java:191)
-	at org.openjena.riot.lang.LangTurtleBase.triplesSameSubject(LangTurtleBase.java:233)
-	at org.openjena.riot.lang.LangTurtle.oneTopLevelElement(LangTurtle.java:34)
-	at org.openjena.riot.lang.LangTurtleBase.runParser(LangTurtleBase.java:132)
-	at org.openjena.riot.lang.LangBase.parse(LangBase.java:75)
-	at org.openjena.riot.system.JenaReaderTurtle2.readWorker(JenaReaderTurtle2.java:34)
-	at org.openjena.riot.system.JenaReaderRIOT.readImpl(JenaReaderRIOT.java:124)
-	at org.openjena.riot.system.JenaReaderRIOT.read(JenaReaderRIOT.java:79)
-	at com.hp.hpl.jena.rdf.model.impl.ModelCom.read(ModelCom.java:226)
-	at org.apache.clerezza.rdf.jena.parser.JenaParserProvider.parse(JenaParserProvider.java:68)
-	at org.apache.clerezza.rdf.core.serializedform.Parser.parse(Parser.java:191)
-	at org.apache.clerezza.rdf.core.serializedform.Parser.parse(Parser.java:162)
-	at org.apache.clerezza.rdf.core.serializedform.Parser.parse(Parser.java:128)
-	at it.cnr.istc.stlab.tipalo.drt.fred.Fred.generate(Fred.java:574)
-	at it.cnr.istc.stlab.kapi.ontologygenerator.fred.SimpleFREDWrapper.read(SimpleFREDWrapper.java:498)
-	at it.cnr.istc.stlab.tipalo.drt.fred.web.resources.FREDResource.handleRequest(FREDResource.java:694)
-	at it.cnr.istc.stlab.tipalo.drt.fred.web.resources.FREDResource.getRDF(FREDResource.java:183)
-	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:622)
-	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:172)
-	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:67)
-	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:265)
-	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:83)
-	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:133)
-	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:71)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:996)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:947)
-	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:938)
-	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:399)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:478)
-	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:663)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
-	at org.apache.felix.http.base.internal.handler.ServletHandler.doHandle(ServletHandler.java:91)
-	at org.apache.felix.http.base.internal.handler.ServletHandler.handle(ServletHandler.java:77)
-	at org.apache.felix.http.base.internal.dispatch.ServletPipeline.handle(ServletPipeline.java:42)
-	at org.apache.felix.http.base.internal.dispatch.InvocationFilterChain.doFilter(InvocationFilterChain.java:49)
-	at org.apache.felix.http.base.internal.dispatch.HttpFilterChain.doFilter(HttpFilterChain.java:33)
-	at org.apache.felix.http.base.internal.dispatch.FilterPipeline.dispatch(FilterPipeline.java:48)
-	at org.apache.felix.http.base.internal.dispatch.Dispatcher.dispatch(Dispatcher.java:39)
-	at org.apache.felix.http.base.internal.DispatcherServlet.service(DispatcherServlet.java:55)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
-	at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:511)
-	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:390)
-	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
-	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
-	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
-	at org.mortbay.jetty.Server.handle(Server.java:326)
-	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:536)
-	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:915)
-	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:539)
-	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
-	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:405)
-	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
-	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
-</pre>
-<hr /><i><small>Powered by Jetty://</small></i><br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-<br/>                                                
-
-</body>
-</html>
+<rdf:RDF
+    xmlns:j.0="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:j.3="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.4="http://www.ontologydesignpatterns.org/ont/boxer/boxer.owl#"
+    xmlns:j.5="http://www.ontologydesignpatterns.org/ont/framenet/abox/frame/"
+    xmlns:j.7="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Blacks%26"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.6="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#" > 
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#suggest_1">
+    <j.0:Topic rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Melania_trump"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Suggest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Increase">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Increase_45040000"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#FoodStamp">
+    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Supplemental_Nutrition_Assistance_Program"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Stamp"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Food"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/framenet/abox/frame/Quot">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#increase_1">
+    <j.2:hasModality rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Possible"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Increase"/>
+    <j.0:Patient rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#payment_1"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#husband_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#situation_1">
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/framenet/abox/frame/Quot_1"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#increase_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Situation"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#peace_1"/>
+    <j.2:involves rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#make_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#food_1">
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stamp_1"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#payment_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Food"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#FoodStampPayment">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#StampPayment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#stamp_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#FoodStamp"/>
+    <j.1:associatedWith rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#payment_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#peace_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Peace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Melania_trump">
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Melania_Trump"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Female"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#payment_1">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#FoodStampPayment"/>
+    <j.6:hasQuantifier rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#multiple"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Suggest">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Suggest_37070110"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#StampPayment">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Payment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#blacks%26quot_1">
+    <j.6:hasDeterminer rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl#the"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Blacks%26quot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#make_1">
+    <j.2:hasModality rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Possible"/>
+    <j.0:Agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#husband_1"/>
+    <j.0:Theme rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#peace_1"/>
+    <j.3:byFoodStampPaymentOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Make"/>
+    <j.3:with rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#blacks%26quot_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#husband_1">
+    <j.3:husbandOf rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Melania_trump"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Husband"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#Make">
+    <owl:equivalentClass rdf:resource="http://www.ontologydesignpatterns.org/ont/vn/data/Make_29030000"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/framenet/abox/frame/Quot_1">
+    <j.2:hasModality rdf:resource="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl#Possible"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/framenet/abox/frame/Quot"/>
+    <j.4:agent rdf:resource="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#husband_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/fred/domain.owl#thing_1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+</rdf:RDF>
